@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+
+public class Main {
+
+
+    public static void main(String[] args) {
+    }
+
+    //    2. Создать переменные всех пройденных типов данных, и инициализировать их значения;
+    public static void Second (){
+        byte by = -120; //от -128 до 127
+        short sh = 2157;//от -32768 до 32767
+        int in = 18;//от -2147483648 до 2147483647
+        long l = -88755754;//от -9223372036854775808 до 9223372036854775807
+        float fl = 12.23f;//32-битное знаковое число с плавающей запятой одинарной точности
+        double d = -123.123;//64-битное знаковое число с плавающей запятой двойной точности
+        char ch = '\u2242';//от '\u0000' или 0 до '\uffff' или 65,535
+        boolean bo = true;//false, true
+    }
+
+    //    3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода;
+    public static float three (float a, float b, float c, float d){
+        return a * (b + (c / d));
+    }
+
+    //    4. Написать метод, принимающий на вход два числа, и проверяющий что их сумма лежит в пределах от 10 до 20(включительно), если да – вернуть true, в противном случае – false;
+    public static boolean four(int a, int b){
+        return 10 <= a + b && a + b <= 20;
+    }
+
+    //    5. Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль положительное ли число передали, или отрицательное; Замечание: ноль считаем положительным числом.
+    public static void five(int a){
+        System.out.println(a < 0 ? "-" : "+");
+    }
+
+    //    6. Написать метод, которому в качестве параметра передается целое число, метод должен вернуть true, если число отрицательное;
+    public static boolean six(int i){
+        return i < 0;
+    }
+
+    //    7. Написать метод, которому в качестве параметра передается строка, обозначающая имя, метод должен вывести в консоль сообщение «Привет, указанное_имя!»;
+    public static void seven(String name){
+        System.out.printf("Hey, %s!", name);
+    }
+
+    //    8. * Написать метод, который определяет является ли год високосным, и выводит сообщение в консоль. Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
+    public static boolean eighth(int year){
+        return year % 100 != 0 && year % 4 == 0 || year % 400 ==0;
+    }
+}
